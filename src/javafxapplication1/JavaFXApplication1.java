@@ -78,8 +78,8 @@ public class JavaFXApplication1 extends Application{
                 root.getChildren().add(gC.showDest());
                 
                 //determine if colliding
-                if(cHandler.isColliding(gC.pos[0]+gC.change[0],gC.pos[1]+gC.change[1],50,50)){
-                    root.getChildren().add(gC.doNotMove());
+                if(cHandler.isColliding(gC.getRect().getX()+gC.getChange()[0],gC.getRect().getY()+gC.getChange()[1],50,50)){
+                    root.getChildren().add(gC.getRect());
                     
                 }else{
                     root.getChildren().add(gC.moveTowardDest());

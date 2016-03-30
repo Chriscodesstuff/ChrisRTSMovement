@@ -56,10 +56,11 @@ public class gameCharacter {
         //this.rect.setRotate(this.timer);
         return(this.rect);
     }
-    public Rectangle doNotMove (){
-        this.timer+=2;
-        //this.rect.setRotate(this.timer);
+    public Rectangle getRect (){
         return(this.rect);
+    }
+    public double[] getChange (){
+        return(this.change);
     }
     public Line showProgress (){
         this.progress.setStartX(this.pos[0]);

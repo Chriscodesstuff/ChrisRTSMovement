@@ -40,6 +40,7 @@ public class CollisionHandler {
             //System.out.println("stuff " + a);
             if(this.check(x-(w/2),y-(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
                 System.out.println("stuff 1");
+                System.out.println(a);
                 return(true);
                 
             }else if(this.check(x+(w/2),y-(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
