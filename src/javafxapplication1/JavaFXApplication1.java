@@ -47,7 +47,7 @@ public class JavaFXApplication1 extends Application{
         
         
         new AnimationTimer(){
-            gameCharacter gC = new gameCharacter();
+            GameCharacter gC = new GameCharacter();
             Rectangle background = new Rectangle(0,0,w);
             Terrain terrain = new Terrain();
             CollisionHandler cHandler = new CollisionHandler();

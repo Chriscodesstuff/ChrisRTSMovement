@@ -7,7 +7,7 @@
 package javafxapplication1;
 
 import java.util.ArrayList;
-import java.lang.Math;
+//import java.lang.Math;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Ellipse;
@@ -16,7 +16,7 @@ import javafx.scene.paint.Color;
  *
  * @author Chris
  */
-public class gameCharacter {
+public class GameCharacter {
     
     int timer = 0;
     
