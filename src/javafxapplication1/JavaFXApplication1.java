@@ -64,9 +64,11 @@ public class JavaFXApplication1 extends Application{
                 terrain.add(100,200);
                 terrain.add(125,200);
                 terrain.add(150,200);
+                terrain.add(175,200);
                 cHandler.add(100,200,25,25);
                 cHandler.add(125,200,25,25);
                 cHandler.add(150,200,25,25);
+                cHandler.add(175,200,25,25);
                 
                 //draw terrrain
                 for (int a=0;a<terrain.getSize();a++){

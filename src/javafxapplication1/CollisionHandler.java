@@ -38,19 +38,20 @@ public class CollisionHandler {
                 return(true);
             }*/
             //System.out.println("stuff " + a);
+            System.out.println(a);
             if(this.check(x-(w/2),y-(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
-                System.out.println("stuff 1");
-                System.out.println(a);
+                //System.out.println("stuff 1");
+                
                 return(true);
                 
             }else if(this.check(x+(w/2),y-(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
-                System.out.println("stuff 2");
+                //System.out.println("stuff 2");
                 return(true);
             }else if(this.check(x-(w/2),y+(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
-                System.out.println("stuff 3");
+                //System.out.println("stuff 3");
                 return(true);
             }else if(this.check(x+(w/2),y+(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
-                System.out.println("stuff 4");
+                //System.out.println("stuff 4");
                 return(true);
             }else{
                 
