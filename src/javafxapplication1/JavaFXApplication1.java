@@ -90,14 +90,11 @@ public class JavaFXApplication1 extends Application{
                 root.setOnTouchPressed(new EventHandler<TouchEvent>(){
                     public void handle(TouchEvent me){
                         gC.setDest(me.getTouchPoint().getSceneX(),me.getTouchPoint().getSceneY());
-                        terrain.add(me.getTouchPoint().getSceneX()+10,me.getTouchPoint().getSceneY()+10);
                     }
                 });            
                 root.setOnMousePressed(new EventHandler<MouseEvent>(){
                     public void handle(MouseEvent me){
                         gC.setDest(me.getX(),me.getY());
-                        
-                        terrain.add(me.getX(),me.getY());
                     }
                 });
                 
