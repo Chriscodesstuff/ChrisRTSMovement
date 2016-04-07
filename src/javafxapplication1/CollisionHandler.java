@@ -33,7 +33,7 @@ public class CollisionHandler {
         }
     }
     public boolean isColliding (double x,double y, double w, double h){
-        for(int a = 0; a < this.hitboxes.size();a++){
+        for(int a = 1; a < this.hitboxes.size();a++){
             /*if(x>this.hitboxes.get(a)[0]-26&&x<this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2]+26&&y>this.hitboxes.get(a)[1]-26&&y<this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3]+26){
                 return(true);
             }*/
@@ -49,6 +49,7 @@ public class CollisionHandler {
                 return(true);
             }else if(this.check(x-(w/2),y+(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
                 //System.out.println("stuff 3");
+
                 return(true);
             }else if(this.check(x+(w/2),y+(h/2),this.hitboxes.get(a)[0],this.hitboxes.get(a)[1],this.hitboxes.get(a)[0]+this.hitboxes.get(a)[2],this.hitboxes.get(a)[1]+this.hitboxes.get(a)[3])){
                 //System.out.println("stuff 4");

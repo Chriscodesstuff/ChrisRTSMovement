@@ -16,6 +16,9 @@ import java.util.ArrayList;
 import javafx.scene.Scene;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.geometry.Rectangle2D;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -51,6 +54,9 @@ public class JavaFXApplication1 extends Application{
             Rectangle background = new Rectangle(0,0,w);
             Terrain terrain = new Terrain();
             CollisionHandler cHandler = new CollisionHandler();
+            Image image = new Image("https://media.bbcdoctorwhoshop.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/1/9/19285-doctor-who-tardis-bluetooth-speaker-front_2.jpg");
+            ImageView iv1 = new ImageView();
+            Rectangle2D viewport = new Rectangle2D(0,0,100,100);
             
             public void handle (long currentNanoTime){
                 
@@ -79,14 +85,26 @@ public class JavaFXApplication1 extends Application{
                 root.getChildren().add(gC.showProgress());
                 root.getChildren().add(gC.showDest());
                 
+                //image
+                iv1.setImage(image);
+                iv1.setFitWidth(100);
+                iv1.setPreserveRatio(true);
+                iv1.setSmooth(true);
+                iv1.setCache(true);
+                iv1.setX(300);
+                iv1.setY(100);
+                // iv1.setViewport(viewport);
+                root.getChildren().add(iv1);
+                
+                
                 //determine if colliding
                 if(cHandler.isColliding(gC.getRect().getX()+gC.getChange()[0]+(gC.getRect().getWidth()/2),gC.getRect().getY()+gC.getChange()[1]+(gC.getRect().getHeight()/2),50,50)){
                     root.getChildren().add(gC.getRect());
-                    
                 }else{
                     root.getChildren().add(gC.moveTowardDest());
-                    
                 }
+                //image
+                
                 
                 //detect touch mouse
                 root.setOnTouchPressed(new EventHandler<TouchEvent>(){
